@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        *{
+            margin: 0;
+            color: black;
+        }
+    </style>
+<head>
+    <script>
+        var CRLF   = 10;
+        var BULLET = String.fromCharCode(45);
+
+        function Init() {
+            if (txt.addEventListener) txt.addEventListener("input", OnInput, false);
+        }
+
+        function OnInput(event) {
+            char = event.target.value.substr(-1).charCodeAt(0);
+            nowLen = txt.value.length;
+
+            if (nowLen > prevLen.value) {
+                if (char == CRLF) txt.value = txt.value + BULLET + " ";
+                if (nowLen == 1) txt.value = BULLET + " " + txt.value;
+            }
+            prevLen.value = nowLen;
+        }
+    </script>
+</head>
+
+<body onload="Init ();">
+    <h4>Automatic bullets in a text box</h4>
+    <textarea id="txt" rows="15" cols="40"></textarea>
+    <input type="" id="prevLen" value="0"/>
+</body>
+<script>
+</script>
+</html>
+

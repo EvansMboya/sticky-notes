@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .portfolio-menu{
+        text-align: center;
+    }
+    .portfolio-menu ul li{
+        display: inline-block;
+        margin: 0;
+        list-style: none;
+        padding: 10px 15px;
+
+        border: 1px solid tomato;
+        cursor: pointer;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+
+    }
+    .portfolio-menu ul li:hover{
+        background: tomato;
+        color: #fff;
+
+    }
+    .portfolio-item{
+        width: 100%;
+    }
+    .portfolio-item .item{
+        width: 303px;
+        float: left;
+        margin-bottom: 10px;
+    }
+    li.active{
+        background-color: tomato;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="portfolio-menu">
+            <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".web">Wbdev</li>
+                <li data-filter=".seo">seo</li>
+                <li data-filter=".gfx">gfx</li>
+            </ul>    
+        </div>
+        <div class="portfolio-item">
+            <div class="item web">
+                <h1>web</h1>
+            </div>
+            <div class="item gfx">
+                <h1>gfx</h1>
+            </div>
+            <div class="item web">
+                <h1>web</h1>
+            </div>
+            <div class="item seo">
+                <h1>seo</h1>
+            </div>
+            <div class="item seo">
+                <h1>seo</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<!-- or -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<script>
+
+    $('.portfolio-item').isotope({
+        itemSelector: '.item',
+        layoutMode:'fitRows'
+    });
+    $('.portfolio-menu ul li').click(function(){
+        $('.portfolio-menu ul li').removeClass('active');
+        $(this).addClass('active');
+
+        var selector=$(this).attr('data-filter');
+        $('.portfolio-item').isotope({
+            filter:selector
+        });
+        return false;
+    });
+
+</script>
+
+
+
+</html>
