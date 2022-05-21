@@ -49,7 +49,6 @@ body{
 
 .complete-button {
     padding: 0;
-    
     text-align: center;
     cursor: pointer;
 }
@@ -136,6 +135,22 @@ line-height:235.5%;
     padding-bottom:20px ;
     border: none;
     
+}
+.completed .colour1,
+.completed .colour2,
+.completed .colour3,
+.completed .colour4,
+.completed .colour5,
+.completed .colour6{
+    background-color: #797979ab;
+    
+}
+.completed li{
+    text-decoration: line-through;
+    text-decoration: line-through;
+    opacity: .5;
+    list-style: circle;
+    transition: .5s;
 }
 .pending , .completed{
     width: 20.5%;
