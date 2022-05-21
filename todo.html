@@ -18,10 +18,67 @@
 <body>
     
     <div class="container align-justify-center">
-        <div class="add_note col-6">
-            <button class=" btn btn-primary  btn-block ">Add Note</button>
-        </div>
         
+          
+        
+
+        <div class="add_note col-6">
+        <button type="button" class="btn btn-primary btn-block " data-toggle="modal" data-target="#exampleModalCenter">
+            Add Your Note
+        </button>
+        </div> 
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Add Note</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                 <form action="">
+                        <div class="form_group">
+                            <textarea name="add_note" id="" style="width: 100%;"></textarea>
+                        </div>
+                        <label for="colour">Pick Note Colour</label>
+                        <br>
+                        <div class="d-flex ">
+
+                            <input type="radio" id="pink" name="pick_color" value="colour1">
+                              <label for="pink"><div style="width:30px; height:30px; border-radius:5px;" class="colour1"></div></label><br>
+                              
+                            <input type="radio" id="red" name="pick_color" value="colour2">
+                              <label for="red"><div style="width:30px; height:30px; border-radius:5px;" class="colour2"></div></label><br>
+                              
+                            <input type="radio" id="orange" name="pick_color" value="colour3">
+                              <label for="orange"><div style="width:30px; height:30px; border-radius:5px;" class="colour3"></div></label><br>
+                              
+                            <input type="radio" id="blue" name="pick_color" value="colour4">
+                              <label for="blue"><div style="width:30px; height:30px; border-radius:5px;" class="colour4"></div></label><br>
+                              
+                            <input type="radio" id="purple" name="pick_color" value="colour5">
+                              <label for="purple"><div style="width:30px; height:30px; border-radius:5px;" class="colour5"></div></label><br>
+                              
+                            <input type="radio" id="green" name="pick_color" value="colour6">
+                              <label for="green"><div style="width:30px; height:30px; border-radius:5px;" class="colour6"></div></label><br>
+                              
+                        </div>  
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" name="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                 </form>
+              </div>
+            </div>
+          </div>
+
+
+
             <div class="btn-group d-flex justify-content-center todo-status" role="group" aria-label="Basic example">
                 
                     <button type="button" class="btn active" > Show all</button>
