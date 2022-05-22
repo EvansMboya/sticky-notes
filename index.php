@@ -70,7 +70,7 @@
                               <label for="green"><div style="width:30px; height:30px; border-radius:5px;" class="colour6"></div></label><br>
                               
                         </div>  
-                        <input type="hidden" name="status" value="pending">
+                        <input type="hidden" name="status" value="pending"> 
                     </div>
                     <div class="modal-footer">
                         <?php if($update==true){

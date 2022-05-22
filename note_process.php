@@ -50,12 +50,23 @@ if(isset($_GET['edit'])){
 
  if(isset($_GET['completed'])){
     $note_id=$_GET['completed'];
-    $status='completed';
-
-    $mysqli->query("UPDATE `sticky_notes` SET `notes_status`='$status' WHERE notes_id= $note_id");
-
+    $result=$mysqli->query("SELECT notes_status FROM `sticky_notes` WHERE notes_id=$note_id");
+    $note=$result->fetch_array();
+    $status=$note['notes_status'];
     
- }
+    print_r($status) ;
+    
+    if($status=="pending"){
+        $status="completed";
+        $mysqli->query("UPDATE `sticky_notes` SET `notes_status`='$status' WHERE notes_id= $note_id");
+
+    }else{
+        $status="pending";
+        $mysqli->query("UPDATE `sticky_notes` SET `notes_status`='$status' WHERE notes_id= $note_id");
+    }
+    }
+    
+ 
  function auto_list($data){
      $data= '<li>'.str_replace(array("\r","\n\n","\n"),array('',"\n","</li>\n<li>"),trim($data,"\n\r")).'</li>';
      return $data;
