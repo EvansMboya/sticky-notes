@@ -1,4 +1,4 @@
-<?php require_once 'note_process.php'?>
+<?php require 'note_process.php'?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,8 +43,9 @@
                 </div>
                 <div class="modal-body">
                  <form action="" method="POST">
+                        <input type="hidden" name="note_id" value="<?php echo( $note_id); ?>">
                         <div class="form_group">
-                            <textarea name="add_note" id="" style="width: 100%;" rows="10"></textarea>
+                            <textarea name="add_note" id="list" style="width: 100%;" rows="10"><?php echo( $add_note); ?></textarea>
                         </div>
                         <label for="colour">Pick Note Colour</label>
                         <br>
@@ -72,7 +73,12 @@
                         <input type="hidden" name="status" value="pending">
                     </div>
                     <div class="modal-footer">
-                    <button type="submit" name="submit" class="btn btn-primary">add note</button>
+                        <?php if($update==true){
+                        echo( '<button type="submit" id="addList" name="update" class="btn btn-primary">update</button>');}
+                        else{
+                            echo( '<button type="submit" id="addList" name="submit" class="btn btn-primary">add note</button>');
+                        }
+                        ?>
                     </div>
                  </form>
               </div>
@@ -112,8 +118,8 @@
                     <?php echo $note['notes_list']; ?>
                     </ul>
                     <div class="complete-button d-flex" >
-                        <span class="material-symbols-outlined flex-fill">edit_note </span>
-                        <span class="material-symbols-outlined flex-fill">check_circle</span>
+                        <a href="index.php?edit=<?php echo $note['notes_id'];?>"><span class="material-symbols-outlined flex-fill">edit_note </span></a> 
+                        <a href="index.php?completed=<?php echo $note['notes_id'];?>"><span class="material-symbols-outlined flex-fill">check_circle</span></a> 
                     </div>
                 </div>
             </div>
@@ -143,6 +149,9 @@
         console.log(true);
         
     }
+
+    
+    
 </script>
 
 </html>
