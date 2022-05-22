@@ -79,7 +79,7 @@
             </div>
           </div>
 
-
+          
 
             <div class="btn-group d-flex justify-content-center todo-status" role="group" aria-label="Basic example">
                 
@@ -89,165 +89,36 @@
                 
             
             </div>
+           
+    
+            
+            
         <div class="todo-items card-columns justify-content-center">
 
             <!--CARDS-->
+            <?php $result=$mysqli->query("SELECT * FROM `sticky_notes`"); 
 
-            <div class="item pending">
-                <div class="note colour1 card ">
-                    <div class="note_section d-flex justify-content-center w-100 .cat1" >
-                        <h6 class="flex-fill">15/18/2022</h6>
-                        <span class="material-symbols-rounded">delete</span>
-                    </div>
-                    <ul>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                    </ul>
-                    <div class="complete-button d-flex" >
-                        <span class="material-symbols-outlined flex-fill">edit_note </span>
-                        <span class="material-symbols-outlined flex-fill">check_circle</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item  completed">
-                <div class="note colour2 card ">
-                    <div class="note_section d-flex justify-content-center w-100 .cat1" >
-                        <h6 class="flex-fill">15/18/2022</h6>
-                        <span class="material-symbols-rounded">delete</span>
-                    </div>
-                    <ul>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        
-                    </ul>
-                    <div class="complete-button d-flex" >
-                        <span class="material-symbols-outlined flex-fill">edit_note </span>
-                        <span class="material-symbols-outlined flex-fill">check_circle</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item pending">
-                <div class="note colour3 card ">
-                    <div class="note_section d-flex justify-content-center w-100 .cat1" >
-                        <h6 class="flex-fill">15/18/2022</h6>
-                        <span class="material-symbols-rounded">delete</span>
-                    </div>
-                    <ul>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                    </ul>
-                    <div class="complete-button d-flex" >
-                        <span class="material-symbols-outlined flex-fill">edit_note </span>
-                        <span class="material-symbols-outlined flex-fill">check_circle</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item  completed">
-                <div class="note colour4 card ">
-                    <div class="note_section d-flex justify-content-center w-100 .cat1" >
-                        <h6 class="flex-fill">15/18/2022</h6>
-                        <span class="material-symbols-rounded">delete</span>
-                    </div>
-                    <ul>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                    </ul>
-                    <div class="complete-button d-flex" >
-                        <span class="material-symbols-outlined flex-fill">edit_note </span>
-                        <span class="material-symbols-outlined flex-fill">check_circle</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item pending">
-                <div class="note colour5 card ">
-                    <div class="note_section d-flex justify-content-center w-100 .cat1" >
-                        <h6 class="flex-fill">15/18/2022</h6>
-                        <span class="material-symbols-rounded">delete</span>
-                    </div>
-                    <ul>
-                        <li>bath</li>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                    </ul>
-                    <div class="complete-button d-flex" >
-                        <span class="material-symbols-outlined flex-fill">edit_note </span>
-                        <span class="material-symbols-outlined flex-fill">check_circle</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item completed">
-                <div class="note colour6 card ">
-                    <div class="note_section d-flex justify-content-center w-100 .cat1" >
-                        <h6 class="flex-fill">15/18/2022</h6>
-                        <span class="material-symbols-rounded">delete</span>
-                    </div>
-                    <ul>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                        
-                    </ul>
-                    <div class="complete-button d-flex" >
-                        <span class="material-symbols-outlined flex-fill">edit_note </span>
-                        <span class="material-symbols-outlined flex-fill">check_circle</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item pending">
-                <div class="note colour1 card ">
-                    <div class="note_section d-flex justify-content-center w-100 .cat1" >
-                        <h6 class="flex-fill">15/18/2022</h6>
-                        <span class="material-symbols-rounded">delete</span>
-                    </div>
-                    <ul>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                        <li>Shave</li>
-                        <li>drink cofee</li>
-                        <li>wash dishes</li>
-                        <li>bath</li>
-                    </ul>
-                    <div class="complete-button d-flex" >
-                        <span class="material-symbols-outlined flex-fill">edit_note </span>
-                        <span class="material-symbols-outlined flex-fill">check_circle</span>
-                    </div>
-                </div>
-            </div>
+          foreach( $result as $note):
+           ?>
 
             
+            <div class="item <?php echo $note['notes_status']; ?>">
+                <div class="note <?php echo $note['notes_color']; ?> card ">
+                    <div class="note_section d-flex justify-content-center w-100 .cat1" >
+                        <h6 class="flex-fill"><?php echo $note['notes_time']; ?></h6>
+                        <a href="note_process.php?delete=<?php echo $note['notes_id'];?>"><span class="material-symbols-rounded">delete</span></a> 
+                    </div>
+                    <ul>
+                    <?php echo $note['notes_list']; ?>
+                    </ul>
+                    <div class="complete-button d-flex" >
+                        <span class="material-symbols-outlined flex-fill">edit_note </span>
+                        <span class="material-symbols-outlined flex-fill">check_circle</span>
+                    </div>
+                </div>
+            </div>
 
+          <?php endforeach ?>
             
         </div>
         

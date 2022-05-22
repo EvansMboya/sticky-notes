@@ -10,4 +10,6 @@ echo('connected');
 
      $mysqli->query("INSERT INTO `sticky_notes`( `notes_list`, `notes_color`, `notes_status`) VALUES ('$add_note','$pick_color','$status')") or die($mysqli->error);
 
+     header("location:index.php");
+
  }
