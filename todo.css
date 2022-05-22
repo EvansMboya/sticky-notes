@@ -37,6 +37,17 @@ body{
     border: none !important;
 }
 
+.add_note .btn{
+    background-color: #8FFF00;
+    background-color: #8FFF00;
+    color: black;
+    border-radius: 10px;
+    border: none !important;
+    font-weight: 500;
+    transition: .5s;
+    width: 100%;
+   
+}
 .btn.active{
     background-color: #8FFF00;
     color: black;
@@ -142,7 +153,7 @@ line-height:235.5%;
 .completed .colour4,
 .completed .colour5,
 .completed .colour6{
-    background-color: #797979ab;
+    background-color: #9b9b9b;
     
 }
 .completed li{

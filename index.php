@@ -1,3 +1,5 @@
+<?php require_once 'note_process.php'?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +24,8 @@
           
         
 
-        <div class="add_note col-6">
-        <button type="button" class="btn btn-primary btn-block " data-toggle="modal" data-target="#exampleModalCenter">
+        <div class="add_note ">
+        <button type="button" class="btn  btn-block " data-toggle="modal" data-target="#exampleModalCenter">
             Add Your Note
         </button>
         </div> 
@@ -40,7 +42,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                 <form action="">
+                 <form action="" method="POST">
                         <div class="form_group">
                             <textarea name="add_note" id="" style="width: 100%;" rows="10"></textarea>
                         </div>
@@ -67,10 +69,10 @@
                               <label for="green"><div style="width:30px; height:30px; border-radius:5px;" class="colour6"></div></label><br>
                               
                         </div>  
+                        <input type="hidden" name="status" value="pending">
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" name="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" name="submit" class="btn btn-primary">add note</button>
                     </div>
                  </form>
               </div>
