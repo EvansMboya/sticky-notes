@@ -36,7 +36,9 @@ body{
     transition: .5s;
     border: none !important;
 }
-
+.note_section a{
+    color: white;
+}
 .add_note .btn{
     background-color: #8FFF00;
     background-color: #8FFF00;

@@ -118,8 +118,8 @@
                     <?php echo $note['notes_list']; ?>
                     </ul>
                     <div class="complete-button d-flex" >
-                        <a href="index.php?edit=<?php echo $note['notes_id'];?>"><span class="material-symbols-outlined flex-fill">edit_note </span></a> 
-                        <a href="index.php?completed=<?php echo $note['notes_id'];?>"><span class="material-symbols-outlined flex-fill">check_circle</span></a> 
+                        <a href="index.php?edit=<?php echo $note['notes_id'];?>" class="flex-fill"><span class="material-symbols-outlined ">edit_note </span></a> 
+                        <a href="index.php?completed=<?php echo $note['notes_id'];?>" class="flex-fill"><span class="material-symbols-outlined flex-fill">check_circle</span></a> 
                     </div>
                 </div>
             </div>
